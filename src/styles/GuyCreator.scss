@@ -1,5 +1,5 @@
 .guyCreatorPage {
-	background-color: yellow;
+	background: linear-gradient(#1e1a71, #5351e0);
 	height: 100vh;
 	position: absolute;
 	left: 100%;
@@ -8,5 +8,16 @@
 
 	&--visible {
 		left: 0%;
+	}
+
+	.mainPageButtonCol {
+		justify-content: flex-start;
+    flex-direction: row;
+    display: flex;
+	}
+
+	.mainPageBtn {
+		margin-top: 30px;
+		margin-left: 30px;
 	}
 }

@@ -1,59 +1,43 @@
 .mainPage {
-    width: 100vw;
-    background: linear-gradient(#1e1a71, #5351e0);
-    box-shadow: 3px 3px 10px;
-    position: absolute;
+	width: 100vw;
+	height: 100vh;
+	background: linear-gradient(#1e1a71, #5351e0);
+	position: absolute;
 	right: 100%;
-    transition: .35s right ease-in-out;
+	transition: .35s right ease-in-out;
     
-    &--visible {
-        right: 0%;
-    }
+	&--visible {
+		right: 0%;
+	}
 
-    ul {
-        margin: 0 auto;
-        padding: 50px 0px 25px 0px;
-        display: flex;
-        justify-content: center;
+	.titleRow {
+		color: white;
+    height: 100px;
+		letter-spacing: 2px;
+    text-align: center;
+    margin: 50px 0;
+		
+		h1 {
+			font-size: 60px;
+			font-weight: 400;
+			margin-bottom: 5px;
+		}
 
-        li {
-            display: inline-block;
-            width: 30%;
-            color: white;
-            text-align: center;
-            cursor: pointer;
-            font-size: 26px;
-            @extend %transition;
+		h2 {
+			font-size: 30px;
+			font-weight: 100;
+			letter-spacing: -1px;
+		}
+	}
 
-            &:hover {
-                color: rgb(212, 198, 198);
-            }
+	.creatorButtonCol {
+		justify-content: flex-end;
+    flex-direction: row;
+    display: flex;
+	}
 
-            .searchInput {
-                margin: 0 auto;
-                display: block;
-                border: 0px;
-                background: linear-gradient(#5855ff, #bbbbbf);
-                color: white;
-                font-size: 17px;
-                text-align: center;
-                box-shadow: 0px 0px 50px #4d4bd3;
-                border-radius: 10px;
-                box-shadow: 1px 1px 5px black;
-                opacity: 1;
-                transition: all .35s ease-in-out;
-
-                &:focus {
-                    outline: 0;
-                }
-            }
-            
-            .hidden {
-                opacity: 0;
-            }
-        }
-    }
-    .searchBar {
-        padding: 0px 0px 25px 0px;
-    }
+	.creatorBtn {
+		margin-top: 30px;
+		margin-right: 30px;
+	}
 }

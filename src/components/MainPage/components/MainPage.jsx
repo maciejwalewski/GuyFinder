@@ -54,23 +54,18 @@ class MainPage extends Component {
 		} = this.state;
 		return (
 			<div className={mounted ? 'mainPage mainPage--visible' : 'mainPage'}>
-				<ul>
-					<li href="#" onClick={this.togglePersonSearch}>Person search</li>
-					<li href="#" onClick={this.toggleTechSearch}>Technology search</li>
-					<DelayLink to='/creator/' delay={350} onDelayStart={this.dismounting}><p>Go to Creator</p></DelayLink>
-				</ul>
-				<ul className="searchBar">
-					<li>
-						<input
-							className={this.state.searchPersonShown ? "searchInput" : "searchInput hidden"}
-							type="text" />
-					</li>
-					<li>
-						<input
-							className={this.state.searchTechShown ? "searchInput" : "searchInput hidden"}
-							type="text" />
-					</li>
-				</ul>
+				<div className="row">
+					<div className="col-xs-12 creatorButtonCol">
+						<DelayLink to='/creator/' delay={350} onDelayStart={this.dismounting}><button className="creatorBtn">Creator</button></DelayLink>
+					</div>
+				</div>
+				<div className="row">
+					<div className="col-xs-12 titleRow">
+						<h1>GuyFinder</h1>
+						<h2>Perfect tool to find right guy!</h2>
+					</div>
+					
+				</div>
 			</div>
 		);
 	}

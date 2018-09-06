@@ -35,7 +35,11 @@ class GuyCreator extends Component {
 
 		return (
 			<div className={mounted ? 'guyCreatorPage guyCreatorPage--visible' : 'guyCreatorPage'}>
-				<DelayLink to='/' delay={350} onDelayStart={this.dismounting}><p>Back to Main Page</p></DelayLink>
+				<div className="row">
+					<div className="col-xs-12 mainPageButtonCol">
+						<DelayLink to='/' delay={350} onDelayStart={this.dismounting}><button className="mainPageBtn">Main Page</button></DelayLink>
+					</div>
+				</div>
 			</div>
 		);
 	}

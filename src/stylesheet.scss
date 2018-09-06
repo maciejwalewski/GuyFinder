@@ -1,11 +1,13 @@
-@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,400');
 
+@import './styles/flexboxgrid.css';
 @import './styles/Reset.scss';
 @import './styles/MainPage.scss';
 @import './styles/GuyCreator.scss';
+@import './styles/SiteItems.scss';
 
 body {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Poppins', sans-serif;
     overflow: hidden;
 }
 
