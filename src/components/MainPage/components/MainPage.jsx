@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import DelayLink from '../../Utilities/DelayLink';
 
+import { Results } from '../';
+
 class MainPage extends Component {
 
 	constructor() {
@@ -64,8 +66,8 @@ class MainPage extends Component {
 						<h1>GuyFinder</h1>
 						<h2>Perfect tool to find right guy!</h2>
 					</div>
-					
 				</div>
+				<Results/>
 			</div>
 		);
 	}

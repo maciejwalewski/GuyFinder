@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import DelayLink from '../../Utilities/DelayLink';
 
+import { CreatorPopup } from '../';
+
 class GuyCreator extends Component {
 
 	constructor() {
@@ -40,6 +42,7 @@ class GuyCreator extends Component {
 						<DelayLink to='/' delay={350} onDelayStart={this.dismounting}><button className="mainPageBtn">Main Page</button></DelayLink>
 					</div>
 				</div>
+				<CreatorPopup/>
 			</div>
 		);
 	}
