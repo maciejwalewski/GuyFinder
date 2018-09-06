@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+@import './styles/Reset.scss';
+@import './styles/MainPage.scss';
+@import './styles/GuyCreator.scss';
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    overflow: hidden;
+}
+
+%transition {
+    transition: all 0.15s ease-in-out;
+}

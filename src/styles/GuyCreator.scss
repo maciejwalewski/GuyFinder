@@ -1,0 +1,12 @@
+.guyCreatorPage {
+	background-color: yellow;
+	height: 100vh;
+	position: absolute;
+	left: 100%;
+	width: 100vw;
+	transition: .35s left ease-in-out;
+
+	&--visible {
+		left: 0%;
+	}
+}
