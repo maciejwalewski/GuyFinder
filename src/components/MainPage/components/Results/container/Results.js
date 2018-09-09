@@ -4,13 +4,9 @@ import { connect } from 'react-redux';
 import Results from '../components/Results';
 
 const mapStateToProps = state => {
-    const {
-
-    } = state;
-
-    return {
-
-    };
+  return {
+    peopleList: state.list,
+  };
 }
 
 const mapDispatchToProps = dispatch => bindActionCreators({

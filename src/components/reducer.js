@@ -1,10 +1,17 @@
-export default function peopleReducer(people = {list:[], nextId: 0, currentPerson: 0}, action) {
+export default function peopleReducer(
+    people = {
+      list:[], 
+      nextId: 1, 
+      currentPerson: 1
+    },
+    action
+  ){
   switch (action.type) {
-    case "SET_PERSON":
-      const newPerson = people.list.concat(action.payload);  //create new array
+    case "ADD_PERSON":
+      const newPersonList = people.list.concat(action.payload);  //create new array
       return {
         ...people,
-        list: newPerson,
+        list: newPersonList,
         nextId: people.nextId + 1
       };
 

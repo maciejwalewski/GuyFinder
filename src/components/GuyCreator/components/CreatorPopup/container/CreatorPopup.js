@@ -5,6 +5,7 @@ import CreatorPopup from '../components/CreatorPopup';
 
 const mapStateToProps = (state) => {
 	return {
+		nextId: state.nextId,
 	};
 };
 
@@ -12,7 +13,7 @@ const mapDispatchToProps = (dispatch) => {
 	return {
 		setData: (person) =>
 			dispatch({
-				type: 'SET_PERSON',
+				type: 'ADD_PERSON',
 				payload: person
 			})
 	}

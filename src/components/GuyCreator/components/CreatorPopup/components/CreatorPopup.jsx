@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import DelayLink from '../../Utilities/DelayLink';
+import DelayLink from '../../../../Utilities/DelayLink';
 
 class CreatorPopup extends Component {
 
@@ -8,7 +8,6 @@ class CreatorPopup extends Component {
 		this.state = {
 			name: '',
 			title: '',
-			tech: ''
 		};
 		this.handleSubmit = this.handleSubmit.bind(this);
 		this.updateData = this.updateData.bind(this);
@@ -24,7 +23,6 @@ class CreatorPopup extends Component {
 			num: this.props.nextId,
 			name: this.state.name,
 			title: this.state.title,
-			tech: this.state.tech
 		};
 
 		this.props.setData(person);         //2. pass person object to setData function(below)
@@ -32,7 +30,6 @@ class CreatorPopup extends Component {
 		this.setState({         //3. reset states after click
 			name: '',
 			title: '',
-			tech: ''
 		});
 	};
 
@@ -50,9 +47,6 @@ class CreatorPopup extends Component {
 
 
 	render() {
-		const {
-			mounted,
-		} = this.state;
 
 		return (
 			<form onSubmit={this.handleSubmit}>
@@ -73,16 +67,6 @@ class CreatorPopup extends Component {
 						type="text"
 						name="title"
 						value={this.state.title}
-						onChange={this.updateData}
-					/>
-				</div>
-				<div>
-					<label htmlFor="tech">Technology:</label>
-					<input
-						required
-						type="text"
-						name="tech"
-						value={this.state.tech}
 						onChange={this.updateData}
 					/>
 				</div>

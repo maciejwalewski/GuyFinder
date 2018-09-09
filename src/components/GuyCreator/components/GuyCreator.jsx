@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import DelayLink from '../../Utilities/DelayLink';
 
-import { CreatorPopup } from '../';
+import { CreatorPopup } from './CreatorPopup';
+import { GuyCreatorList } from './GuyCreatorList';
 
 class GuyCreator extends Component {
 
@@ -10,6 +11,8 @@ class GuyCreator extends Component {
 
 		this.state = {
 			mounted: false,
+			createGuyPopupVisible: false,
+			editGuyPopupVisible: false,
 		}
 
 		this.dismounting = this.dismounting.bind(this);
@@ -33,6 +36,8 @@ class GuyCreator extends Component {
 	render() {
 		const {
 			mounted,
+			createGuyPopupVisible,
+			editGuyPopupVisible,
 		} = this.state;
 
 		return (
@@ -43,6 +48,7 @@ class GuyCreator extends Component {
 					</div>
 				</div>
 				<CreatorPopup/>
+				<GuyCreatorList />
 			</div>
 		);
 	}
