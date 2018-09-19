@@ -10,7 +10,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
 	return {
-    removeGuy: (editedGuy) =>
+    editGuy: (editedGuy) =>
       dispatch({
         type: 'EDIT_GUY',
         payload: editedGuy,

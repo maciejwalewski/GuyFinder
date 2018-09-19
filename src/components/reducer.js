@@ -33,26 +33,17 @@ export default function peopleReducer(
       };
 
     case "EDIT_GUY":
-      let editedList = people.list;
-      let editedName = people.list[action.payload].name;
-      let editedTitle = people.list[action.payload].title;
-      let editedTech = people.list[action.payload].tech;
+      const editedGuy = action.payload;
+      const guysList = state.guyReducer.list;
 
-      editedName = action.namePayload;
-      editedTitle = action.titlePayload;
-      editedTech = action.techPayload;
-
-      editedList[action.payload] = {
-        name: editedName,
-        title: editedTitle,
-        tech: editedTech
-      }
-
+      let newGuysList = guysList.map((guy) => {
+        return guy.num == editedGuy.num ? editedGuy : guy;
+      });
 
       return {
         ...state,
         guyReducer: {
-          list: editedList,
+          list: newGuysList,
           nextId: state.guyReducer.nextId,
         },
       }
