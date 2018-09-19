@@ -1,0 +1,1 @@
+export { default as Guy } from './container/Guy';

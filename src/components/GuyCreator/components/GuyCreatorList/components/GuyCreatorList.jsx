@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 
+import { Guy } from './Guy';
+
 class GuyCreatorList extends Component {
 
-	constructor() {
-		super();
+	constructor(props) {
+		super(props);
 	}
 
 	render() {
@@ -24,14 +26,10 @@ class GuyCreatorList extends Component {
 					</div>
 					{
 						peopleList && peopleList.map((guy, index) => 
-							<div className="row creatorListResults" key={index}>
-								<div className="col-xs-2">{ guy.num }</div>
-								<div className="col-xs-2">{ guy.name }</div>
-								<div className="col-xs-2">surname</div>
-								<div className="col-xs-2">{ guy.title }</div>
-								<div className="col-xs-2 green">edit</div>
-								<div className="col-xs-2 red">delete</div>
-							</div>
+							<Guy
+								key={index}
+								guy={guy}
+							/>
 						)
 					}
 					

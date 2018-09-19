@@ -8,30 +8,23 @@ export default function peopleReducer(
   ){
   switch (action.type) {
     case "ADD_PERSON":
-      const newPersonList = people.list.concat(action.payload);  //create new array
+      const newGuyList = people.list.concat(action.payload);  //create new array
       return {
         ...people,
-        list: newPersonList,
+        list: newGuyList,
         nextId: people.nextId + 1
       };
 
-    case "REMOVE_EMPLOYEE":
-      function isIndex(value){
-        return value.num !== action.payload;
-      }
+    case "REMOVE_GUY":
+      const peopleList = people.list;
+      const removedGuyList = peopleList.filter(function(item) {
+        return item.num !== action.payload.num
+      });
 
-      if (confirm('Do You really want to delete ' + people.list[action.payload].name + '?')){
-        let newList = people.list;
-        newList = newList.filter(isIndex);
-        
-        return {
-          ...people,
-          list: newList,
-          nextId: people.nextId
-        };
-      } else {
-        console.log('to nie');
-      }
+      return {
+        ...people,
+        list: removedGuyList
+      };
 
     case "EDIT_EMPLOYEE":
       let editedList = people.list;
