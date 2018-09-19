@@ -5,7 +5,7 @@ import Results from '../components/Results';
 
 const mapStateToProps = state => {
   return {
-    peopleList: state.list,
+    peopleList: state.guyReducer.list,
   };
 }
 

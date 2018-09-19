@@ -5,7 +5,7 @@ import GuyCreatorList from '../components/GuyCreatorList';
 
 const mapStateToProps = (state) => {
 	return {
-		peopleList: state.list,
+		peopleList: state.guyReducer.list,
 	};
 };
 
