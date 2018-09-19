@@ -21,7 +21,7 @@ class GuyCreatorList extends Component {
 						<div className="col-xs-2">Name</div>
 						<div className="col-xs-2">Surname</div>
 						<div className="col-xs-2">Title</div>
-						<div className="col-xs-2">edit</div>
+						<div className="col-xs-2 edit">edit</div>
 						<div className="col-xs-2">delete</div>
 					</div>
 					{

@@ -24,13 +24,33 @@
 	.creatorListResults {
 		color: white;
 		font-size: 15px;
+		cursor: default;
 
 		.green {
 			color: rgb(0, 114, 0);
+			cursor: pointer;
+			font-weight: 600;
 		}
 
 		.red {
 			color: red;
+			cursor: pointer;
+			font-weight: 600;
+		}
+	}
+
+	.guyForm {
+		input {
+			margin-right: 10px;
+			padding: 15px 15px;
+
+			&[type="submit"] {
+				cursor: pointer;
+			}
+		}
+
+		.row {
+			margin: 10px 0;
 		}
 	}
 }

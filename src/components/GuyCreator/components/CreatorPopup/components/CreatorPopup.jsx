@@ -49,10 +49,11 @@ class CreatorPopup extends Component {
 	render() {
 
 		return (
-			<form onSubmit={this.handleSubmit}>
-				<div>
-					<label htmlFor="name">Name:</label>
+			<form className="guyForm" onSubmit={this.handleSubmit}>
+				<div className="row center-xs middle-xs">
+					<label className="col-xs-1" htmlFor="name">Name:</label>
 					<input
+						className="col-xs-2"
 						required
 						type="text"
 						name="name"
@@ -60,9 +61,10 @@ class CreatorPopup extends Component {
 						onChange={this.updateData}
 					/>
 				</div>
-				<div>
-					<label htmlFor="title">Title:</label>
+				<div className="row center-xs middle-xs">
+					<label className="col-xs-1" htmlFor="title">Title:</label>
 					<input
+						className="col-xs-2"
 						required
 						type="text"
 						name="title"
@@ -70,7 +72,9 @@ class CreatorPopup extends Component {
 						onChange={this.updateData}
 					/>
 				</div>
-				<input type="submit" value="Add this dude!" />
+				<div className="row center-xs">
+					<input className="col-xs-2" type="submit" value="Add this dude!" />
+				</div>
 			</form>
 		);
 	}
