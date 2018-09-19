@@ -5,7 +5,7 @@ import CreatorPopup from '../components/CreatorPopup';
 
 const mapStateToProps = (state) => {
 	return {
-		nextId: state.nextId,
+		nextId: state.guyReducer.nextId,
 	};
 };
 
