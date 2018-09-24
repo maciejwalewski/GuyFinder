@@ -1,14 +1,15 @@
-button {
-	border: 3px solid #0b0060;
-	background-color: #ffffff1c;
-	color: #bdbdbd;
+.creatorBtn, .mainPageBtn {
+	border: 3px solid transparent;
+	background-color: $mainColor3;
+	color: white;
 	font-size: 15px;
 	font-weight: bold;
 	padding: 15px 50px;
 	cursor: pointer;
-	transition: .25s all ease-in-out;
+	@include allTransition(.25s);
+	
 
 	&:hover {
-		border: 3px solid #9491af;
+		border: 3px solid white;
 	}
 }

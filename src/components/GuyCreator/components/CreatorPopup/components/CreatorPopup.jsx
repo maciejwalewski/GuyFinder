@@ -50,30 +50,32 @@ class CreatorPopup extends Component {
 
 		return (
 			<form className="guyForm" onSubmit={this.handleSubmit}>
-				<div className="row center-xs middle-xs">
-					<label className="col-xs-1" htmlFor="name">Name:</label>
+				<div className="inputContainer">
 					<input
-						className="col-xs-2"
+						id="name"
 						required
 						type="text"
 						name="name"
 						value={this.state.name}
 						onChange={this.updateData}
 					/>
+					<label htmlFor="name">Name</label>
 				</div>
-				<div className="row center-xs middle-xs">
-					<label className="col-xs-1" htmlFor="title">Title:</label>
+				<div className="inputContainer">
 					<input
-						className="col-xs-2"
+						id="title"
 						required
 						type="text"
 						name="title"
 						value={this.state.title}
 						onChange={this.updateData}
 					/>
+					<label htmlFor="title">Title</label>
 				</div>
 				<div className="row center-xs">
-					<input className="col-xs-2" type="submit" value="Add this dude!" />
+					<button className="submitButton hvr-float-shadow" type="submit">
+						Add this guy!
+					</button>
 				</div>
 			</form>
 		);

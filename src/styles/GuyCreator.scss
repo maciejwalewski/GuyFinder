@@ -1,10 +1,10 @@
 .guyCreatorPage {
-	background: linear-gradient(#1e1a71, #5351e0);
+	background: linear-gradient($mainColor1, $mainColor2);
 	height: 100vh;
 	position: absolute;
 	left: 100%;
 	width: 100vw;
-	transition: .35s left ease-in-out;
+	@include allTransition(.35s);
 
 	&--visible {
 		left: 0%;
@@ -40,17 +40,64 @@
 	}
 
 	.guyForm {
-		input {
-			margin-right: 10px;
-			padding: 15px 15px;
+		padding: 20px 0;
 
-			&[type="submit"] {
-				cursor: pointer;
+		.inputContainer {
+			position: relative;
+			width: 200px;
+			margin: 8px auto;
+
+			label {
+				position: absolute;
+				left: 50%;
+				top: 30%;
+				transform: translateX(-50%);
+				@include allTransition(.15s);
+				font-size: 20px;
+				cursor: text;
+			}
+
+			input {
+				padding: 15px 10px 15px 10px;
+				width: 200px;
+				border-radius: 3px;
+				border: 3px solid transparent;
+				@include allTransition(.30s);
+				font-size: 15px;
+	
+				&:focus + label, &:valid + label {
+					top: 7px;
+    			font-size: 12px;
+				}
+
+				&:focus {
+					border: 3px solid $mainColor2;
+				}
+	
+				&[type="submit"] {
+					cursor: pointer;
+				}
 			}
 		}
 
-		.row {
-			margin: 10px 0;
+		.submitButton {
+			border-radius: 50px;
+			border: 2px solid $mainColor4;
+			padding: 8px 15px;
+			background-color: $mainColor3;
+			cursor: pointer;
+			font-size: 15px;
+			@include allTransition(.12s);
+			color: white;
+			margin: 7px 0 0;
+
+			&:hover {
+				border: 2px solid white;
+			}
+		}
+
+		.editButton {
+			border-radius: 2px;
 		}
 	}
 }

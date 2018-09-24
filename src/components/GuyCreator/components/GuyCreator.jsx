@@ -44,7 +44,9 @@ class GuyCreator extends Component {
 			<div className={mounted ? 'guyCreatorPage guyCreatorPage--visible' : 'guyCreatorPage'}>
 				<div className="row">
 					<div className="col-xs-12 mainPageButtonCol">
-						<DelayLink to='/' delay={350} onDelayStart={this.dismounting}><button className="mainPageBtn">Main Page</button></DelayLink>
+						<DelayLink to='/' delay={350} onDelayStart={this.dismounting}>
+							<button className="mainPageBtn hvr-bounce-in">Main Page</button>
+						</DelayLink>
 					</div>
 				</div>
 				<CreatorPopup/>

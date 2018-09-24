@@ -1,3 +1,14 @@
+@mixin allTransition($time) {
+    transition: all $time ease-in-out;
+}
+
+$mainColor1: #AA9739;	// Main Primary color */
+$mainColor2: #FFF0AA;
+$mainColor3: #D4C26A;
+$mainColor4: #806D15;
+$mainColor5: #554600;
+
+
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,400');
 
 @import './styles/flexboxgrid.css';
@@ -5,12 +16,10 @@
 @import './styles/MainPage.scss';
 @import './styles/GuyCreator.scss';
 @import './styles/SiteItems.scss';
+@import './styles/Results.scss';
+@import './styles/hover.css';
 
 body {
     font-family: 'Poppins', sans-serif;
     overflow: hidden;
-}
-
-%transition {
-    transition: all 0.15s ease-in-out;
 }

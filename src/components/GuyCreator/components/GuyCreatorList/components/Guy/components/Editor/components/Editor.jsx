@@ -58,30 +58,32 @@ class Editor extends Component {
 		return (
 			<div className="editGuy">
 				<form className="guyForm" onSubmit={this.handleSubmit}>
-					<div className="row center-xs middle-xs">
-						<label className="col-xs-1" htmlFor="name">Name:</label>
+					<div className="inputContainer">
 						<input
-							className="col-xs-2"
+							id="nameEditor"
 							type="text"
 							name="name"
 							placeholder={guy.name}
 							value={this.state.name}
 							onChange={this.updateData}
 						/>
+						<label htmlFor="nameEditor">Name</label>
 					</div>
-					<div className="row center-xs middle-xs">
-						<label className="col-xs-1" htmlFor="title">Title:</label>
+					<div className="inputContainer">
 						<input
-							className="col-xs-2"
+							id="titleEditor"
 							type="text"
 							name="title"
 							placeholder={guy.title}
 							value={this.state.title}
 							onChange={this.updateData}
 						/>
+						<label htmlFor="titleEditor">Title</label>
 					</div>
 					<div className="row center-xs">
-						<input className="col-xs-2" type="submit" value="Submit changes" />
+						<button className="submitButton editButton hvr-curl-bottom-right" type="submit">
+							Submit changes
+						</button>
 					</div>
 				</form>
 			</div>

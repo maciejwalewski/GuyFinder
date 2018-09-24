@@ -1,10 +1,10 @@
 .mainPage {
 	width: 100vw;
 	height: 100vh;
-	background: linear-gradient(#1e1a71, #5351e0);
+	background: linear-gradient($mainColor1, $mainColor2);
 	position: absolute;
 	right: 100%;
-	transition: .35s right ease-in-out;
+	@include allTransition(.35s);
     
 	&--visible {
 		right: 0%;

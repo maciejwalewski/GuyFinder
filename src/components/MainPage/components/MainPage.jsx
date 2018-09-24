@@ -58,7 +58,9 @@ class MainPage extends Component {
 			<div className={mounted ? 'mainPage mainPage--visible' : 'mainPage'}>
 				<div className="row">
 					<div className="col-xs-12 creatorButtonCol">
-						<DelayLink to='/creator/' delay={350} onDelayStart={this.dismounting}><button className="creatorBtn">Creator</button></DelayLink>
+						<DelayLink to='/creator/' delay={350} onDelayStart={this.dismounting}>
+							<button className="creatorBtn hvr-bounce-in">Creator</button>
+						</DelayLink>
 					</div>
 				</div>
 				<div className="row">

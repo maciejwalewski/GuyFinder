@@ -104,6 +104,7 @@ switch (process.env.NODE_ENV) {
         contentBase: DEST_PATH,
         open: true,
         overlay: true,
+        historyApiFallback: true,
       },
       watchOptions: {
         poll: true
