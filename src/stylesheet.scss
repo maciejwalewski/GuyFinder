@@ -8,6 +8,11 @@ $mainColor3: #D4C26A;
 $mainColor4: #806D15;
 $mainColor5: #554600;
 
+$avatar-1: url('./img/avatar-female1.png');
+$avatar-2: url('./img/avatar-female2.png');
+$avatar-3: url('./img/avatar-male1.png');
+$avatar-4: url('./img/avatar-male2.png');
+
 
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,400');
 
@@ -15,6 +20,7 @@ $mainColor5: #554600;
 @import './styles/Reset.scss';
 @import './styles/MainPage.scss';
 @import './styles/GuyCreator.scss';
+@import './styles/AvatarChoice.scss';
 @import './styles/SiteItems.scss';
 @import './styles/Results.scss';
 @import './styles/hover.css';
