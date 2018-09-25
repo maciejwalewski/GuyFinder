@@ -17,11 +17,13 @@ class GuyCreatorList extends Component {
 			<div>
 				<div className="results">
 					<div className="row lineNames">
-						<div className="col-xs-2">Number</div>
-						<div className="col-xs-2">Name</div>
+						<div className="col-xs-1">Number</div>
+						<div className="col-xs-2">Avatar</div>
+						<div className="col-xs-1">Name</div>
 						<div className="col-xs-2">Surname</div>
 						<div className="col-xs-2">Title</div>
-						<div className="col-xs-4"></div>
+						<div className="col-xs-2">Description</div>
+						<div className="col-xs-2"></div>
 					</div>
 					{
 						peopleList && peopleList.map((guy, index) => 

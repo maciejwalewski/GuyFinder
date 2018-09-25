@@ -1,18 +1,34 @@
 import React, { Component } from 'react';
 
+import { RadioGroup, RadioButton } from 'react-custom-radio';
+import Select from 'react-select';
+
+const options = [
+	{value: 'Front-end', label: 'Front-end'},
+	{value: 'Back-end', label: 'Back-end'},
+];
+
 class Editor extends Component {
 
 	constructor(props) {
 		super(props);
-		this.state = {
-			name: '',
-			title: '',
-			tech: ''
 
+		const {
+			guy
+		} = this.props;
+
+		this.state = {
+			name: guy.name,
+			surname: guy.surname,
+			title: guy.title,
+			avatar: guy.avatar,
+			description: guy.description,
 		};
 
 		this.handleSubmit = this.handleSubmit.bind(this);
 		this.updateData = this.updateData.bind(this);
+		this.chooseAvatar = this.chooseAvatar.bind(this);
+		this.selectTitle = this.selectTitle.bind(this);
 	}
 
 	handleSubmit(event) {
@@ -25,15 +41,20 @@ class Editor extends Component {
 		let editedGuy = {
 			num: guy.num,
 			name: this.state.name,
+			surname: this.state.surname,
 			title: this.state.title,
+			avatar: this.state.avatar,
+			description: this.state.description,
 		}
 
 		this.props.editGuy(editedGuy);
 
 		this.setState({
 			name: '',
+			surname: '',
 			title: '',
-			tech: ''
+			avatar: '',
+			description: '',
 		});
 
 		this.props.onSubmit();
@@ -46,6 +67,18 @@ class Editor extends Component {
 
 		this.setState({
 			[updateName]: updateValue,
+		});
+	}
+
+	chooseAvatar(selectedValue) {
+		this.setState({
+			avatar: selectedValue,
+		});
+	}
+
+	selectTitle(event) {
+		this.setState({
+			title: event.value,  //REACT-SELECT sending object from 'options' instead of whole event(they might update it since today)
 		});
 	}
 
@@ -71,14 +104,61 @@ class Editor extends Component {
 					</div>
 					<div className="inputContainer">
 						<input
-							id="titleEditor"
+							id="surnameEditor"
 							type="text"
-							name="title"
-							placeholder={guy.title}
-							value={this.state.title}
+							name="surname"
+							placeholder={guy.surname}
+							value={this.state.surname}
 							onChange={this.updateData}
 						/>
-						<label htmlFor="titleEditor">Title</label>
+						<label htmlFor="titleEditor">Surname</label>
+					</div>
+					<div className="inputContainer">
+						<Select
+							onChange={this.selectTitle}
+							options={options}
+							placeholder="Title"
+							isClearable={false}
+						/>
+					</div>
+					<div className="inputContainer">
+						<RadioGroup
+							name="avatar"
+							selectedValue={this.state.avatar}
+							onChange={this.chooseAvatar}
+						>
+							<RadioButton 
+								value="1" 
+								className="avatarButton1" 
+								useHiddenInput={true}
+							/>
+							<RadioButton
+								value="2" 
+								className="avatarButton2" 
+								useHiddenInput={true}
+							/>
+							<RadioButton 
+								value="3" 
+								className="avatarButton3" 
+								useHiddenInput={true}
+							/>
+							<RadioButton 
+								value="4" 
+								className="avatarButton4" 
+								useHiddenInput={true}
+							/>
+
+						</RadioGroup>
+					</div>
+					<div className="inputContainer inputContainer--description">
+						<textarea
+							id="description"
+							type="text"
+							name="description"
+							value={this.state.description}
+							onChange={this.updateData}
+						/>
+						<label htmlFor="description">Description</label>
 					</div>
 					<div className="row center-xs">
 						<button className="submitButton editButton hvr-curl-bottom-right" type="submit">

@@ -1,8 +1,17 @@
 export default function peopleReducer(
     state = {
       guyReducer: {
-        list:[], 
-        nextId: 1,
+        list:[
+          {
+            avatar: '4',
+            description: 'nice front-end',
+            name: 'Maciej',
+            num: 1,
+            surname: 'Walewski',
+            title: 'Front-end',
+          }
+        ], 
+        nextId: 2,
       },
     },
     action

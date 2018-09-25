@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
-import DelayLink from '../../../../Utilities/DelayLink';
 
-import { RadioGroup, Radio, RadioButton } from 'react-custom-radio';
+import { RadioGroup, RadioButton } from 'react-custom-radio';
+import Select from 'react-select';
+
+const options = [
+	{value: 'Front-end', label: 'Front-end'},
+	{value: 'Back-end', label: 'Back-end'},
+];
 
 class CreatorPopup extends Component {
 
@@ -12,10 +17,12 @@ class CreatorPopup extends Component {
 			surname: '',
 			title: '',
 			avatar: '1',
+			description: '',
 		};
 		this.handleSubmit = this.handleSubmit.bind(this);
 		this.updateData = this.updateData.bind(this);
 		this.chooseAvatar = this.chooseAvatar.bind(this);
+		this.selectTitle = this.selectTitle.bind(this);
 	}
 
 
@@ -30,7 +37,7 @@ class CreatorPopup extends Component {
 			surname: this.state.surname,
 			title: this.state.title,
 			avatar: this.state.avatar,
-
+			description: this.state.description,
 		};
 
 		this.props.setData(person);         //2. pass person object to setData function(below)
@@ -40,6 +47,7 @@ class CreatorPopup extends Component {
 			surname: '',
 			title: '',
 			avatar: '1',
+			description: '',
 		});
 	};
 
@@ -49,26 +57,22 @@ class CreatorPopup extends Component {
 		const inputName = event.target.name;
 		const inputValue = event.target.value;
 
-		var that = this;
-
 		this.setState({
 			[inputName]: inputValue
-		}, function() {
-			console.log('avatar:', that.state.avatar);
-		});
-	};
-
-	chooseAvatar(selectedValue) {
-		var that = this;
-
-		this.setState({
-			avatar: selectedValue,
-		}, function() {
-			console.log('avatar:', that.state.avatar);
 		});
 	}
 
+	chooseAvatar(selectedValue) {
+		this.setState({
+			avatar: selectedValue,
+		});
+	}
 
+	selectTitle(event) {
+		this.setState({
+			title: event.value,  //REACT-SELECT sending object from 'options' instead of whole event(they might update it since today)
+		});
+	}
 
 	render() {
 
@@ -97,15 +101,12 @@ class CreatorPopup extends Component {
 					<label htmlFor="surname">Surname</label>
 				</div>
 				<div className="inputContainer">
-					<input
-						id="title"
-						required
-						type="select"
-						name="title"
-						value={this.state.title}
-						onChange={this.updateData}
+					<Select
+						onChange={this.selectTitle}
+						options={options}
+						placeholder="Title"
+						isClearable={false}
 					/>
-					<label htmlFor="title">Title</label>
 				</div>
 				<div className="inputContainer">
 					<RadioGroup
@@ -133,39 +134,18 @@ class CreatorPopup extends Component {
 							className="avatarButton4" 
 							useHiddenInput={true}
 						/>
-
 					</RadioGroup>
 				</div>
-				{/* <div className="inputContainer">
-					<input
-						id="avatar1"
-						type="radio"
-						name="avatar"
-						value="1"
-						onChange={(e) => this.setState({avatar: e.target.value})}
+				<div className="inputContainer inputContainer--description">
+					<textarea
+						id="description"
+						type="text"
+						name="description"
+						value={this.state.description}
+						onChange={this.updateData}
 					/>
-					<input
-						id="avatar2"
-						type="radio"
-						name="avatar"
-						value="2"
-						onChange={(e) => this.setState({avatar: e.target.value})}
-					/>
-					<input
-						id="avatar3"
-						type="radio"
-						name="avatar"
-						value="3"
-						onChange={(e) => this.setState({avatar: e.target.value})}
-					/>
-					<input
-						id="avatar4"
-						type="radio"
-						name="avatar"
-						value="4"
-						onChange={(e) => this.setState({avatar: e.target.value})}
-					/>
-				</div> */}
+					<label htmlFor="description">Description</label>
+				</div>
 				<div className="row center-xs">
 					<button className="submitButton hvr-float-shadow" type="submit">
 						Add this guy!
