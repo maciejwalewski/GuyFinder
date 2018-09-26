@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import DelayLink from '@/components/utilities/DelayLink';
 
-import { CreatorPopup } from './CreatorPopup';
-import { GuyCreatorList } from './GuyCreatorList';
+import { CreatorPopup } from '../';
+import { GuyCreatorList } from '../';
 
 class GuyCreator extends Component {
 

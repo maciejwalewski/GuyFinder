@@ -1,7 +1,7 @@
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-import MainPage from '../components/MainPage'
+import MainPage from '../components/MainPage';
 
 const mapStateToProps = state => {
     const {

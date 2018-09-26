@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { Guy } from './Guy';
+import { Guy } from '../';
 
 class GuyCreatorList extends Component {
 

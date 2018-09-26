@@ -1,7 +1,8 @@
 .guyCreatorPage {
 	background: linear-gradient($mainColor1, $mainColor2);
+	min-height: 100vh;
 	height: 100%;
-	position: absolute;
+	position: relative;
 	left: 100%;
 	width: 100vw;
 	@include allTransition(.35s);

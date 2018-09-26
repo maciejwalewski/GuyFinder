@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import Description from '@/components/shared/Description';
 
-import { Editor } from './Editor';
+import { Editor } from '../';
 
 import avatar1 from '@/img/avatar-female1.png';
 import avatar2 from '@/img/avatar-female2.png';

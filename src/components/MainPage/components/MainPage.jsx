@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import DelayLink from '@/components/utilities/DelayLink';
 
-import { Results } from './Results';
+import { Results } from '../';
 
 class MainPage extends Component {
 

@@ -27,5 +27,6 @@ $avatar-4: url('./img/avatar-male2.png');
 
 body {
     font-family: 'Poppins', sans-serif;
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
