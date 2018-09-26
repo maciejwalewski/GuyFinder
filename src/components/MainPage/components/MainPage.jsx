@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import DelayLink from '../../Utilities/DelayLink';
+import DelayLink from '@/components/utilities/DelayLink';
 
 import { Results } from './Results';
 

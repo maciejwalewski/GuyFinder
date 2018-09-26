@@ -1,10 +1,12 @@
 .mainPage {
-	width: 100vw;
-	height: 100vh;
 	background: linear-gradient($mainColor1, $mainColor2);
+	height: 100%;
 	position: absolute;
 	right: 100%;
+	width: 100vw;
 	@include allTransition(.35s);
+	overflow-x: hidden;
+	overflow-y: auto;
     
 	&--visible {
 		right: 0%;
@@ -44,5 +46,21 @@
 	.resultsElement {
 		color: white;
 		font-size: 15px;
+	}
+
+	.creatorListResults {
+		color: white;
+		font-size: 15px;
+		cursor: default;
+
+		.avatar {
+			width: 50px;
+			height: 50px;
+		}
+
+		> div:not(.readMore) {
+			overflow-x: auto;
+			overflow-y: hidden;
+		}
 	}
 }

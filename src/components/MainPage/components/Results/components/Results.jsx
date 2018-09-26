@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import { ResultsGuy } from '../';
+
 class Results extends Component {
 
 	constructor() {
@@ -13,18 +15,20 @@ class Results extends Component {
 
 		return (
 			<div className="results">
-				<div className="row lineNames">
+				<div className="row center-xs middle-xs lineNames">
+					<div className="col-xs-1"></div>
 					<div className="col-xs-2">Name</div>
 					<div className="col-xs-2">Surname</div>
 					<div className="col-xs-2">Title</div>
+					<div className="col-xs-2">Description</div>
+					<div className="col-xs-5"></div>
 				</div>
 				{
 					peopleList && peopleList.map((guy, index) => 
-						<div className="row resultsElement" key={index}>
-							<div className="col-xs-2">{ guy.name }</div>
-							<div className="col-xs-2">surname</div>
-							<div className="col-xs-2">{ guy.title }</div>
-						</div>
+						<ResultsGuy
+							key={index}
+							guy={guy}
+						/>
 					)
 				}
 			</div>

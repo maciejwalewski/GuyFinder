@@ -33,7 +33,7 @@
 			height: 50px;
 		}
 		
-		> div {
+		> div:not(.readMore) {
 			overflow-x: auto;
 			overflow-y: hidden;
 		}
