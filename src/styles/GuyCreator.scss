@@ -5,8 +5,8 @@
 	left: 100%;
 	width: 100vw;
 	@include allTransition(.35s);
-	overflow-x: hidden;
-	overflow-y: auto;
+	// overflow-x: hidden;
+	// overflow-y: auto;
 
 	&--visible {
 		left: 0%;
@@ -33,10 +33,10 @@
 			height: 50px;
 		}
 		
-		> div:not(.readMore) {
-			overflow-x: auto;
-			overflow-y: hidden;
-		}
+		// > div:not(.readMore) {
+		// 	overflow-x: auto;
+		// 	overflow-y: hidden;
+		// }
 
 		.green {
 			color: rgb(0, 114, 0);

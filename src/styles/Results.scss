@@ -1,6 +1,40 @@
 .results {
   margin: 20px;
 
+  .filters {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    
+    .filterButton {
+      outline: 0;
+      border: 2px solid $mainColor1;
+      background-color: $mainColor2;
+      height: 40px;
+      width: 120px;
+      cursor: pointer;
+
+      &--1 {
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+      }
+
+      &--2 {
+        border-left: 0px;
+        border-right: 0px;
+      }
+
+      &--3 {
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+
+      &.active {
+        background-color: $mainColor3;
+      }
+    }
+  }
+
   .readMore {
     position: relative;
     cursor: pointer;
@@ -17,6 +51,7 @@
       right: 0;
       color: white;
       text-align: left;
+      z-index: 10;
 
       .closeButton {
         color: red;

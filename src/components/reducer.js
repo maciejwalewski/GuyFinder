@@ -9,9 +9,26 @@ export default function peopleReducer(
             num: 1,
             surname: 'Walewski',
             title: 'Front-end',
-          }
+          },
+          {
+            avatar: '3',
+            description: 'nice back-end',
+            name: 'John',
+            num: 2,
+            surname: 'Snow',
+            title: 'Back-end',
+          },
+          {
+            avatar: '2',
+            description: 'nice back-end',
+            name: 'Hermione',
+            num: 3,
+            surname: 'Granger',
+            title: 'Back-end',
+          },
+
         ], 
-        nextId: 2,
+        nextId: 4,
       },
     },
     action

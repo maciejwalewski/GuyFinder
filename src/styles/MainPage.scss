@@ -5,8 +5,8 @@
 	right: 100%;
 	width: 100vw;
 	@include allTransition(.35s);
-	overflow-x: hidden;
-	overflow-y: auto;
+	// overflow-x: hidden;
+	// overflow-y: auto;
     
 	&--visible {
 		right: 0%;
@@ -59,8 +59,8 @@
 		}
 
 		> div:not(.readMore) {
-			overflow-x: auto;
-			overflow-y: hidden;
+			// overflow-x: auto;
+			// overflow-y: hidden;
 		}
 	}
 }

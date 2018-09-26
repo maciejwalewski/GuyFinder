@@ -18,6 +18,7 @@ class Guy extends Component {
       editorShown: false,
       avatarSrc: '',
       descriptionShown: false,
+      mounted: false,
     }
     
     this.editGuy = this.editGuy.bind(this);
@@ -28,7 +29,9 @@ class Guy extends Component {
   }
 
   componentDidMount() {
-    this.avatarSrc();
+    this.setState({
+      mounted: true,
+    })
   }
 
   openDescription() {
@@ -38,7 +41,6 @@ class Guy extends Component {
   }
 
   closeDescription() {
-    var that = this;
     this.setState({
       descriptionShown: false,
     });
@@ -63,28 +65,18 @@ class Guy extends Component {
       guy,
     } = this.props;
 
-    let guyAvatar;
-
     switch (guy.avatar) {
       case '1':
-        guyAvatar = avatar1;
-        break;
+        return avatar1;
       case '2':
-        guyAvatar = avatar2;
-        break;
+        return avatar2;
       case '3':
-        guyAvatar = avatar3;
-        break;
+        return avatar3;
       case '4':
-        guyAvatar = avatar4;
-        break;
+        return avatar4;
       default:
         console.log('Wrong avatar path');
-    }
-
-    this.setState({
-      avatarSrc: guyAvatar
-    });
+    }    
   }
 
 	render() {
@@ -102,7 +94,7 @@ class Guy extends Component {
         <div className="row middle-xs center-xs creatorListResults">
           <div className="col-xs-1">{ guy.num }</div>
           <div className="col-xs-1">
-            <img className="avatar" src={this.state.avatarSrc && this.state.avatarSrc}/>
+            <img className="avatar" src={ this.state.mounted ? this.avatarSrc() : undefined }/>
           </div>
           <div className="col-xs-2">{ guy.name }</div>
           <div className="col-xs-2">{ guy.surname }</div>

@@ -6,7 +6,16 @@ class GuyCreatorList extends Component {
 
 	constructor(props) {
 		super(props);
+
+		this.state = {
+			update: false,
+		}
 	}
+
+	// componentWillReceiveProps() {
+	// 	console.log('newprops in list!');
+		
+	// }
 
 	render() {
 		const {
