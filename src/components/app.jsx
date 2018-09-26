@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Provider } from 'react-redux';
 import { createStore, combineReducers, applyMiddleware } from "redux";
 import { createLogger } from "redux-logger";
-import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
+import { HashRouter, BrowserRouter, Route, Link, Switch } from 'react-router-dom';
 
 import peopleReducer from './reducer';
 
@@ -21,12 +21,12 @@ export default class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <BrowserRouter>
+        <HashRouter>
           <Switch>
             <Route exact path='/' component={MainPage} />
             <Route exact path='/creator/' component={GuyCreator} />
           </Switch>
-        </BrowserRouter>
+        </HashRouter>
       </Provider>
     );
   }

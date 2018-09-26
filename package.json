@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "description": "Basic starter for applications based on React/Redux for educational purposes",
   "main": "index.js",
+  "homepage": "https://maciejwalewski.github.io/GuyFinder/",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server",
     "lint": "eslint src/",
-    "build": "cross-env NODE_ENV=production PLATFORM=web webpack -p --history-api-fallback"
+    "build": "cross-env NODE_ENV=production PLATFORM=web webpack -p --history-api-fallback",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -17,6 +20,7 @@
   "dependencies": {
     "animate.css": "^3.6.1",
     "babel-polyfill": "^6.26.0",
+    "gh-pages": "^2.0.0",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-custom-radio": "^1.0.7",
