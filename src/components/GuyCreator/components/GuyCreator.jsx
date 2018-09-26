@@ -11,8 +11,6 @@ class GuyCreator extends Component {
 
 		this.state = {
 			mounted: false,
-			createGuyPopupVisible: false,
-			editGuyPopupVisible: false,
 		}
 
 		this.dismounting = this.dismounting.bind(this);
@@ -36,8 +34,6 @@ class GuyCreator extends Component {
 	render() {
 		const {
 			mounted,
-			createGuyPopupVisible,
-			editGuyPopupVisible,
 		} = this.state;
 
 		return (
