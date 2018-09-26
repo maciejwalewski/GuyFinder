@@ -5,7 +5,7 @@
     display: flex;
     justify-content: center;
     margin-bottom: 30px;
-    
+
     .filterButton {
       outline: 0;
       border: 2px solid $mainColor1;
@@ -52,6 +52,7 @@
       color: white;
       text-align: left;
       z-index: 10;
+      box-shadow: 3px 3px 14px black;
 
       .closeButton {
         color: red;
