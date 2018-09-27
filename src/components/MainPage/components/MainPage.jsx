@@ -19,11 +19,15 @@ class MainPage extends Component {
 	};
 
 	componentDidMount() {
+		this.props.measureWindow();
+
 		setTimeout(() => {
 			this.setState({
 				mounted: true,
 			});
 		}, 100);
+
+		window.addEventListener("resize", this.props.measureWindow.bind(this));
 	}
 
 	dismounting() {

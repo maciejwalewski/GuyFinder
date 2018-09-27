@@ -4,7 +4,8 @@ import { createStore, combineReducers, applyMiddleware } from "redux";
 import { createLogger } from "redux-logger";
 import { HashRouter, BrowserRouter, Route, Link, Switch } from 'react-router-dom';
 
-import peopleReducer from './reducer';
+import guyReducer from './reducers/guyReducer';
+import windowReducer from './reducers/windowReducer';
 
 import styles from '../stylesheet.scss';
 
@@ -12,9 +13,13 @@ import { MainPage } from './MainPage';
 import { GuyCreator } from './GuyCreator';
 
 const store = createStore(
-  peopleReducer,
+  combineReducers({
+    guyReducer,
+    windowReducer
+  }),
+  {},
   applyMiddleware(createLogger())
-)
+);
 
 
 export default class App extends Component {

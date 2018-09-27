@@ -4,14 +4,21 @@ import { connect } from 'react-redux';
 import GuyCreator from '../components/GuyCreator';
 
 const mapStateToProps = state => {
-    const {
-    } = state;
+	const {
+	} = state;
 
-    return {
-    };
+	return {
+		
+	};
 };
 
-const mapDispatchToProps = dispatch => bindActionCreators({
-}, dispatch);
+const mapDispatchToProps = (dispatch) => {
+	return {
+		measureWindow: () =>
+			dispatch({
+				type: 'WINDOW_MEASUREMENT',
+			})
+	};
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(GuyCreator);

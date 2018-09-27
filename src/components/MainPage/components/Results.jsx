@@ -33,11 +33,9 @@ class Results extends Component {
 		this.setState({
 			filter: selectedValue,
 		}, function() {
-			console.log(that.state.filter);
 
 			let peopleList = that.props.peopleList;
 			let newPeopleList = [];
-			console.log('guystoslice:', peopleList);
 			if (that.state.filter == 'Front-end') {
 				for (let i = 0; i < peopleList.length; i++) {
 					if (peopleList[i].title == 'Front-end') {

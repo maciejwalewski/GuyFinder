@@ -12,11 +12,6 @@ class GuyCreatorList extends Component {
 		}
 	}
 
-	// componentWillReceiveProps() {
-	// 	console.log('newprops in list!');
-		
-	// }
-
 	render() {
 		const {
 			peopleList
