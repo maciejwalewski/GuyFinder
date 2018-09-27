@@ -101,13 +101,10 @@ class Guy extends Component {
           <div className="col-xs-1">{ guy.title }</div>
           <div className="col-xs-1 readMore">
             <span onClick={this.openDescription}>Read more</span>
-            {
-              descriptionShown && 
-              <Description
-                description={guy.description}
-                closeButton={this.closeDescription}
-              />
-            }
+            <Description
+              description={guy.description}
+              closeButton={this.closeDescription}
+            />
           </div>
           <div className="col-xs-2 green" onClick={this.editGuy}>edit</div>
           <div className="col-xs-2 red" onClick={this.removeGuy}>delete</div>

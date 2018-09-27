@@ -13,7 +13,6 @@ class Description extends Component {
 
 		return (
 			<div className="description">
-        <div className="closeButton" onClick={this.props.closeButton}>X</div>
         {description && description}
 			</div>
 		)

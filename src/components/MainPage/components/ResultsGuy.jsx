@@ -80,13 +80,10 @@ class ResultsGuy extends Component {
           <div className="col-xs-2">{ guy.title }</div>
           <div className="col-xs-2 readMore">
             <span onClick={this.openDescription}>Read more</span>
-            {
-              descriptionShown && 
               <Description
                 description={guy.description}
                 closeButton={this.closeDescription}
               />
-            }
           </div>
           <div className="col-xs-5"></div>
         </div>
