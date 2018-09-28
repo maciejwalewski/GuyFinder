@@ -14,12 +14,15 @@ class GuyCreatorList extends Component {
 
 	render() {
 		const {
-			peopleList
+			peopleList,
+			windowWidth,
 		} = this.props;
 
 		return (
 			<div>
 				<div className="results">
+				{
+					windowWidth > 767 &&
 					<div className="row middle-xs center-xs lineNames">
 						<div className="col-xs-1">Number</div>
 						<div className="col-xs-1">Avatar</div>
@@ -29,6 +32,7 @@ class GuyCreatorList extends Component {
 						<div className="col-xs-1">Description</div>
 						<div className="col-xs-4"></div>
 					</div>
+				}
 					{
 						peopleList && peopleList.map((guy, index) => 
 							<Guy

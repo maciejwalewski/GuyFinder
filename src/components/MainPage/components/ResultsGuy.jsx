@@ -72,20 +72,20 @@ class ResultsGuy extends Component {
 		return (
       <div>
         <div className="row middle-xs center-xs creatorListResults">
-          <div className="col-xs-1">
+          <div className="col-xs-12 col-sm-1">
             <img className="avatar" src={ this.state.mounted ? this.avatarSrc() : undefined }/>
           </div>
-          <div className="col-xs-2">{ guy.name }</div>
-          <div className="col-xs-2">{ guy.surname }</div>
-          <div className="col-xs-2">{ guy.title }</div>
-          <div className="col-xs-2 readMore">
+          <div className="col-xs-12 col-sm-2">{ guy.name }</div>
+          <div className="col-xs-12 col-sm-2">{ guy.surname }</div>
+          <div className="col-xs-12 col-sm-2">{ guy.title }</div>
+          <div className="col-xs-12 col-sm-2 readMore">
             <span onClick={this.openDescription}>Read more</span>
               <Description
                 description={guy.description}
                 closeButton={this.closeDescription}
               />
           </div>
-          <div className="col-xs-5"></div>
+          <div className="col-xs-12 col-sm-5"></div>
         </div>
         
       </div>

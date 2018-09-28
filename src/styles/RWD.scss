@@ -1,0 +1,70 @@
+@media (max-width: 767px) {
+
+  .mainPage {
+
+    .creatorBtn {
+      margin-top: 10px;
+      margin-right: 10px;
+      font-size: 12px;
+      padding: 10px 25px;
+
+      &:hover {
+        border: 2px solid white;
+      }
+    }
+    
+    .titleRow {
+      margin: 20px 0;
+      letter-spacing: 0px;
+  
+      h1 {
+        font-size: 38px;
+      }
+  
+      h2 {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .guyCreatorPage {
+    .mainPageBtn {
+      margin-top: 10px;
+      margin-left: 20px;
+      font-size: 12px;
+      padding: 10px 25px;
+
+      &:hover {
+        border: 2px solid white;
+      }
+    }
+  }
+
+
+  .creatorListResults {
+    width: 50%;
+    margin: 0 auto;
+    box-shadow: 0 0 10px 4px $mainColor2;
+    padding: 15px 0;
+    margin-bottom: 35px;
+
+    > div {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+
+  .creatorListResults {
+    width: 80%;
+  }
+
+  .results {
+    .filters {
+      .filterButton {
+        width: 85px;
+      }
+    }
+  }
+}

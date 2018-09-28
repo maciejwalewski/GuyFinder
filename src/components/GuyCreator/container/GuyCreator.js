@@ -4,9 +4,6 @@ import { connect } from 'react-redux';
 import GuyCreator from '../components/GuyCreator';
 
 const mapStateToProps = state => {
-	const {
-	} = state;
-
 	return {
 		
 	};

@@ -92,22 +92,22 @@ class Guy extends Component {
 		return (
 			<div>
         <div className="row middle-xs center-xs creatorListResults">
-          <div className="col-xs-1">{ guy.num }</div>
-          <div className="col-xs-1">
+          <div className="col-xs-12 col-sm-1">{ guy.num }</div>
+          <div className="col-xs-12 col-sm-1">
             <img className="avatar" src={ this.state.mounted ? this.avatarSrc() : undefined }/>
           </div>
-          <div className="col-xs-2">{ guy.name }</div>
-          <div className="col-xs-2">{ guy.surname }</div>
-          <div className="col-xs-1">{ guy.title }</div>
-          <div className="col-xs-1 readMore">
+          <div className="col-xs-12 col-sm-2">{ guy.name }</div>
+          <div className="col-xs-12 col-sm-2">{ guy.surname }</div>
+          <div className="col-xs-12 col-sm-1">{ guy.title }</div>
+          <div className="col-xs-12 col-sm-1 readMore">
             <span onClick={this.openDescription}>Read more</span>
             <Description
               description={guy.description}
               closeButton={this.closeDescription}
             />
           </div>
-          <div className="col-xs-2 green" onClick={this.editGuy}>edit</div>
-          <div className="col-xs-2 red" onClick={this.removeGuy}>delete</div>
+          <div className="col-xs-12 col-sm-2 green" onClick={this.editGuy}>edit</div>
+          <div className="col-xs-12 col-sm-2 red" onClick={this.removeGuy}>delete</div>
         </div>
         {
           editorShown &&

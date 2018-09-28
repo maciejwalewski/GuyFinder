@@ -63,8 +63,12 @@ class Results extends Component {
 	render() {
 		
 		const {
-			peopleListState
+			peopleListState,
 		} = this.state
+
+		const {
+			windowWidth,
+		} = this.props;
 
 		return (
 			<div className="results">
@@ -98,14 +102,17 @@ class Results extends Component {
 						
 					</RadioGroup>
 				</div>
-				<div className="row center-xs middle-xs lineNames">
-					<div className="col-xs-1"></div>
-					<div className="col-xs-2">Name</div>
-					<div className="col-xs-2">Surname</div>
-					<div className="col-xs-2">Title</div>
-					<div className="col-xs-2">Description</div>
-					<div className="col-xs-5"></div>
-				</div>
+				{
+					windowWidth > 767 &&
+					<div className="row center-xs middle-xs lineNames">
+						<div className="col-xs-1"></div>
+						<div className="col-xs-2">Name</div>
+						<div className="col-xs-2">Surname</div>
+						<div className="col-xs-2">Title</div>
+						<div className="col-xs-2">Description</div>
+						<div className="col-xs-5"></div>
+					</div>
+				}
 				{
 					peopleListState && peopleListState.map((guy, index) => 
 						<ResultsGuy

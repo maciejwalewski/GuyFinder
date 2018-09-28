@@ -6,6 +6,7 @@ import Results from '../components/Results';
 const mapStateToProps = state => {
   return {
     peopleList: state.guyReducer.list,
+    windowWidth: state.windowReducer.windowWidth,
   };
 }
 

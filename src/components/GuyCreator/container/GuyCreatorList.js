@@ -6,6 +6,7 @@ import GuyCreatorList from '../components/GuyCreatorList';
 const mapStateToProps = (state) => {
 	return {
 		peopleList: state.guyReducer.list,
+		windowWidth: state.windowReducer.windowWidth,
 	};
 };
 

@@ -38,6 +38,7 @@
   .readMore {
     position: relative;
     cursor: pointer;
+    color: $mainColor4;
 
     &:hover {
       .description {
