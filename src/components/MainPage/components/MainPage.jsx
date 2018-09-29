@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import DelayLink from '@/components/utilities/DelayLink';
 
 import { Results } from '../';
+import Circles from '@/components/shared/Circles';
 
 class MainPage extends Component {
 
@@ -58,8 +59,17 @@ class MainPage extends Component {
 		const {
 			mounted
 		} = this.state;
+
+		const {
+			windowWidth,
+		} = this.props;
+
 		return (
 			<div className={mounted ? 'mainPage mainPage--visible' : 'mainPage'}>
+				{
+					windowWidth > 767 &&
+					<Circles/>
+				}
 				<div className="row">
 					<div className="col-xs-12 creatorButtonCol">
 						<DelayLink to='/creator/' delay={350} onDelayStart={this.dismounting}>

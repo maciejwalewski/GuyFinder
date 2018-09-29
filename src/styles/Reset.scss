@@ -27,12 +27,17 @@ button:focus {
 	outline:0;
 }
 
+button::-moz-focus-inner {
+  border: 0;
+}
+
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
 	line-height: 1;
+	height: auto;
 }
 ol, ul {
 	list-style: none;

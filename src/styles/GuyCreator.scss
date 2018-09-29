@@ -6,8 +6,7 @@
 	left: 100%;
 	width: 100%;
 	@include allTransition(.35s);
-	// overflow-x: hidden;
-	// overflow-y: auto;
+	z-index: 0;
 
 	&--visible {
 		left: 0%;

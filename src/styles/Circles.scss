@@ -1,0 +1,161 @@
+@mixin move($move, $time) {
+  -webkit-animation: $move $time linear infinite;
+  -ms-animation: $move $time linear infinite;
+  animation: $move $time linear infinite;
+}
+
+.circlesContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  
+  .circles {
+    position: relative;
+    width: 80%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: -1;
+    top: 50px;
+  
+    .circle {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background-color: $mainColor2;
+      border-radius: 100%;
+      filter: blur(15px);
+      box-shadow: 0 0 0px 10px #ffffff5d;
+
+      &--col1 {
+        background-color: $mainColor2;
+      }
+      
+      &--col2 {
+        background-color: $mainColor3;
+      }
+
+      &--col3 {
+        background-color: $mainColor4;
+      }
+
+      &--col4 {
+        background-color: $mainColor5;
+      }
+
+      &--small {
+        width: 45px;
+        height: 45px;
+      }
+
+      &--medium {
+        width: 80px;
+        height: 80px;
+      }
+      
+      &--firstRow {
+        top: 30px;
+      }
+
+      &--secondRow {
+        top: 60px;
+      }
+
+      &--thirdRow {
+        top: 85px;
+      }
+
+      &--fourthRow {
+        top: 110px;
+      }
+
+      &--fifthRow {
+        top: 138px;
+      }
+
+      &--sixthRow {
+        top: 175px;
+      }
+
+      &--move1 {
+        @include move(move1, 35s);
+      }
+
+      &--move2 {
+        @include move(move2, 40s);
+      }
+
+      &--move3 {
+        @include move(move3, 45s);
+      }
+
+      &--move4 {
+        @include move(move4, 50s);
+      }
+
+      &--move5 {
+        @include move(move5, 55s);
+      }
+
+      &--move6 {
+        @include move(move1, 55s);
+      }
+
+      &--move7 {
+        @include move(move2, 45s);
+      }
+
+      &--move8 {
+        @include move(move3, 38s);
+      }
+
+      &--move9 {
+        @include move(move4, 30s);
+      }
+
+      &--move10 {
+        @include move(move5, 25s);
+      }
+
+
+    }  
+  }
+}
+
+
+@keyframes move1 {
+  0%    { left: 10%; }
+  50%  { left: 30%; }
+  100%    { left: 10%; }
+}
+
+@keyframes move2 {
+  0%    { left: 85%; }
+  50%  { left: 65%; }
+  100%    { left: 85%; }
+}
+
+@keyframes move3 {
+  0%    { left: 35%; }
+  50%  { left: 55%; }
+  100%    { left: 35%; }
+}
+
+@keyframes move4 {
+  0%    { left: 65%; }
+  50%  { left: 34%; }
+  100%    { left: 65%; }
+}
+
+@keyframes move5 {
+  0%    { left: 90%; }
+  50%  { left: 65%; }
+  100%    { left: 90%; }
+}
+
+@keyframes move6 {
+  0%    { left: 55%; }
+  50%  { left: 25%; }
+  100%    { left: 55%; }
+}
