@@ -29,6 +29,11 @@ class Editor extends Component {
 		this.updateData = this.updateData.bind(this);
 		this.chooseAvatar = this.chooseAvatar.bind(this);
 		this.selectTitle = this.selectTitle.bind(this);
+		this.closeEditor = this.closeEditor.bind(this);
+	}
+
+	closeEditor() {
+		this.props.closeEditor();
 	}
 
 	handleSubmit(event) {
@@ -91,6 +96,7 @@ class Editor extends Component {
 		return (
 			<div className="editGuy">
 				<form className="guyForm" onSubmit={this.handleSubmit}>
+					<div className="closeBtn" onClick={this.closeEditor}>X</div>
 					<div className="inputContainer">
 						<input
 							id="nameEditor"

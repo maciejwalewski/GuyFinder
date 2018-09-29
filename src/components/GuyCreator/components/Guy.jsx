@@ -17,33 +17,18 @@ class Guy extends Component {
     this.state = {
       editorShown: false,
       avatarSrc: '',
-      descriptionShown: false,
       mounted: false,
     }
     
     this.editGuy = this.editGuy.bind(this);
     this.removeGuy = this.removeGuy.bind(this);
     this.avatarSrc = this.avatarSrc.bind(this);
-    this.openDescription = this.openDescription.bind(this);
-    this.closeDescription = this.closeDescription.bind(this);
   }
 
   componentDidMount() {
     this.setState({
       mounted: true,
     })
-  }
-
-  openDescription() {
-    this.setState({
-      descriptionShown: true,
-    });
-  }
-
-  closeDescription() {
-    this.setState({
-      descriptionShown: false,
-    });
   }
   
   removeGuy() {
@@ -86,12 +71,11 @@ class Guy extends Component {
 
     const {
       editorShown,
-      descriptionShown,
     } = this.state;
 
 		return (
-			<div>
-        <div className="row middle-xs center-xs creatorListResults">
+			<div className="creatorResult">
+        <div className="row middle-xs center-xs eachGuy">
           <div className="col-xs-12 col-sm-1">{ guy.num }</div>
           <div className="col-xs-12 col-sm-1">
             <img className="avatar" src={ this.state.mounted ? this.avatarSrc() : undefined }/>
@@ -106,14 +90,19 @@ class Guy extends Component {
               closeButton={this.closeDescription}
             />
           </div>
-          <div className="col-xs-12 col-sm-2 green" onClick={this.editGuy}>edit</div>
-          <div className="col-xs-12 col-sm-2 red" onClick={this.removeGuy}>delete</div>
+          <div className="col-xs-12 col-sm-2">
+            <button className="editBtn" onClick={this.editGuy}>edit</button>
+          </div>
+          <div className="col-xs-12 col-sm-2">
+            <button className="deleteBtn" onClick={this.removeGuy}>delete</button>
+          </div>
         </div>
         {
           editorShown &&
           <Editor 
             guy={guy}
             onSubmit={() => {this.setState({editorShown: false})}}
+            closeEditor={() => {this.setState({editorShown: false})}}
           />
         }
 			</div>
