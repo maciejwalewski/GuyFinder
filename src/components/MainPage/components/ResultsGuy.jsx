@@ -71,7 +71,7 @@ class ResultsGuy extends Component {
 
 		return (
       <div>
-        <div className="row middle-xs center-xs eachGuy">
+        <div className={guy.num == 1 ? "row middle-xs center-xs eachGuy maciek" : "row middle-xs center-xs eachGuy"}>
           <div className="col-xs-12 col-sm-1">
             <img className="avatar" src={ this.state.mounted ? this.avatarSrc() : undefined }/>
           </div>

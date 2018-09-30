@@ -63,4 +63,25 @@
 			// overflow-y: hidden;
 		}
 	}
+
+	.maciek {
+		box-shadow: 0px 0px 6px 1px rgba(0, 134, 0, 0.308);
+    margin: 10px auto;
+	}
+
+	.sourceCode {
+		position: relative;
+    display: block;
+    margin: 70px auto;
+    width: 220px;
+		text-decoration: none;
+		color: white;
+		animation: flash 2s infinite;
+	}
+}
+
+@keyframes flash {
+	0% { color: white; }
+	70% { color: red; }
+	100% { color: white; }
 }

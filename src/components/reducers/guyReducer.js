@@ -3,7 +3,7 @@ export default function guyReducer(
     list: [
       {
         avatar: '4',
-        description: 'Best Junior Front-end You will probably find (source: his own research)',
+        description: 'Ready for hard work and constant learning front-end developer. Probably the best junior You will actually find. (source: own research) ',
         name: 'Maciej',
         num: 1,
         surname: 'Walewski',

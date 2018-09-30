@@ -84,6 +84,7 @@ class MainPage extends Component {
 					</div>
 				</div>
 				<Results/>
+				<a className="sourceCode" target="blank" href="https://github.com/maciejwalewski/GuyFinder/tree/master/src">Check out my source code!</a>
 			</div>
 		);
 	}
