@@ -1,7 +1,6 @@
 export default function guyReducer(
   state = {
-    list: [
-      {
+    list: [{
         avatar: '4',
         description: 'Ready for hard work and constant learning front-end developer. Probably the best junior You will actually find. (source: own research) ',
         name: 'Maciej',
@@ -33,7 +32,7 @@ export default function guyReducer(
 ) {
   switch (action.type) {
     case "ADD_PERSON":
-      const newGuyList = state.list.concat(action.payload);  //create new array
+      const newGuyList = state.list.concat(action.payload); //create new array
       return {
         ...state,
         list: newGuyList,

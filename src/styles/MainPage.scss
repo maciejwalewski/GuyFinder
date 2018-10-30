@@ -7,18 +7,18 @@
 	width: 100%;
 	@include allTransition(.35s);
 	z-index: 0;
-    
+
 	&--visible {
 		right: 0%;
 	}
 
 	.titleRow {
 		color: white;
-    height: 100px;
+		height: 100px;
 		letter-spacing: 2px;
-    text-align: center;
-    margin: 50px 0;
-		
+		text-align: center;
+		margin: 50px 0;
+
 		h1 {
 			font-size: 60px;
 			font-weight: 400;
@@ -34,8 +34,8 @@
 
 	.creatorButtonCol {
 		justify-content: flex-end;
-    flex-direction: row;
-    display: flex;
+		flex-direction: row;
+		display: flex;
 	}
 
 	.creatorBtn {
@@ -58,7 +58,7 @@
 			height: 50px;
 		}
 
-		> div:not(.readMore) {
+		>div:not(.readMore) {
 			// overflow-x: auto;
 			// overflow-y: hidden;
 		}
@@ -66,14 +66,14 @@
 
 	.maciek {
 		box-shadow: 0px 0px 6px 1px rgba(0, 134, 0, 0.308);
-    margin: 10px auto;
+		margin: 10px auto;
 	}
 
 	.sourceCode {
 		position: relative;
-    display: block;
-    margin: 70px auto;
-    width: 220px;
+		display: block;
+		margin: 70px auto;
+		width: 220px;
 		text-decoration: none;
 		color: white;
 		animation: flash 2s infinite;
@@ -81,7 +81,15 @@
 }
 
 @keyframes flash {
-	0% { color: white; }
-	70% { color: red; }
-	100% { color: white; }
+	0% {
+		color: white;
+	}
+
+	70% {
+		color: red;
+	}
+
+	100% {
+		color: white;
+	}
 }

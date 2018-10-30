@@ -1,4 +1,3 @@
-import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
 import GuyCreatorList from '../components/GuyCreatorList';
@@ -11,8 +10,7 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => {
-	return {
-	}
+	return {}
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(GuyCreatorList);

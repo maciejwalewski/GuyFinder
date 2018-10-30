@@ -9,7 +9,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  
+
   .circles {
     position: relative;
     width: 80%;
@@ -18,7 +18,7 @@
     margin: 0 auto;
     z-index: -1;
     top: 50px;
-  
+
     .circle {
       position: absolute;
       width: 100px;
@@ -31,7 +31,7 @@
       &--col1 {
         background-color: $mainColor2;
       }
-      
+
       &--col2 {
         background-color: $mainColor3;
       }
@@ -53,7 +53,7 @@
         width: 80px;
         height: 80px;
       }
-      
+
       &--firstRow {
         top: 30px;
       }
@@ -119,43 +119,91 @@
       }
 
 
-    }  
+    }
   }
 }
 
 
 @keyframes move1 {
-  0%    { left: 10%; }
-  50%  { left: 30%; }
-  100%    { left: 10%; }
+  0% {
+    left: 10%;
+  }
+
+  50% {
+    left: 30%;
+  }
+
+  100% {
+    left: 10%;
+  }
 }
 
 @keyframes move2 {
-  0%    { left: 85%; }
-  50%  { left: 65%; }
-  100%    { left: 85%; }
+  0% {
+    left: 85%;
+  }
+
+  50% {
+    left: 65%;
+  }
+
+  100% {
+    left: 85%;
+  }
 }
 
 @keyframes move3 {
-  0%    { left: 35%; }
-  50%  { left: 55%; }
-  100%    { left: 35%; }
+  0% {
+    left: 35%;
+  }
+
+  50% {
+    left: 55%;
+  }
+
+  100% {
+    left: 35%;
+  }
 }
 
 @keyframes move4 {
-  0%    { left: 65%; }
-  50%  { left: 34%; }
-  100%    { left: 65%; }
+  0% {
+    left: 65%;
+  }
+
+  50% {
+    left: 34%;
+  }
+
+  100% {
+    left: 65%;
+  }
 }
 
 @keyframes move5 {
-  0%    { left: 90%; }
-  50%  { left: 65%; }
-  100%    { left: 90%; }
+  0% {
+    left: 90%;
+  }
+
+  50% {
+    left: 65%;
+  }
+
+  100% {
+    left: 90%;
+  }
 }
 
 @keyframes move6 {
-  0%    { left: 55%; }
-  50%  { left: 25%; }
-  100%    { left: 55%; }
+  0% {
+    left: 55%;
+  }
+
+  50% {
+    left: 25%;
+  }
+
+  100% {
+    left: 55%;
+  }
 }

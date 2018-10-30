@@ -8,12 +8,12 @@ const mapStateToProps = state => {
 	};
 };
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
 	return {
 		measureWindow: () =>
-      dispatch({
-        type: 'WINDOW_MEASUREMENT',
-      })
+			dispatch({
+				type: 'WINDOW_MEASUREMENT',
+			})
 	};
 }
 

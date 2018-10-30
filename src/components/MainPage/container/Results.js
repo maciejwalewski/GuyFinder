@@ -1,4 +1,3 @@
-import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
 import Results from '../components/Results';
@@ -10,8 +9,10 @@ const mapStateToProps = state => {
   };
 }
 
-const mapDispatchToProps = dispatch => bindActionCreators({
+const mapDispatchToProps = dispatch => {
+  return {
 
-}, dispatch);
+  };
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Results);

@@ -14,8 +14,8 @@
 
 	.mainPageButtonCol {
 		justify-content: flex-start;
-    flex-direction: row;
-    display: flex;
+		flex-direction: row;
+		display: flex;
 	}
 
 	.mainPageBtn {
@@ -30,17 +30,17 @@
 			color: white;
 			font-size: 15px;
 			cursor: default;
-	
+
 			.avatar {
 				width: 50px;
 				height: 50px;
 			}
-			
+
 			// > div:not(.readMore) {
 			// 	overflow-x: auto;
 			// 	overflow-y: hidden;
 			// }
-	
+
 			.editBtn {
 				background-color: transparent;
 				border: 2px solid green;
@@ -49,13 +49,13 @@
 				color: green;
 				font-weight: 800;
 				@include allTransition(.15s);
-	
+
 				&:hover {
 					border: 2px solid rgb(0, 189, 0);
 					color: rgb(0, 189, 0);
 				}
 			}
-	
+
 			.deleteBtn {
 				background-color: transparent;
 				border: 2px solid red;
@@ -64,7 +64,7 @@
 				color: red;
 				font-weight: 800;
 				@include allTransition(.15s);
-	
+
 				&:hover {
 					border: 2px solid rgb(255, 75, 75);
 					color: rgb(255, 75, 75);
@@ -120,7 +120,8 @@
 				cursor: text;
 			}
 
-			input, textarea {
+			input,
+			textarea {
 				padding: 15px 10px 15px 10px;
 				width: 100%;
 				border-radius: 3px;
@@ -128,16 +129,17 @@
 				@include allTransition(.30s);
 				font-size: 15px;
 				resize: none;
-	
-				&:focus + label, &:valid + label {
+
+				&:focus+label,
+				&:valid+label {
 					top: 7px;
-    			font-size: 12px;
+					font-size: 12px;
 				}
 
 				&:focus {
 					border: 3px solid $mainColor2;
 				}
-	
+
 				&[type="submit"] {
 					cursor: pointer;
 				}

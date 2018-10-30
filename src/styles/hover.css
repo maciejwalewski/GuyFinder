@@ -18,7 +18,10 @@
   -webkit-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
-.hvr-bounce-in:hover, .hvr-bounce-in:focus, .hvr-bounce-in:active {
+
+.hvr-bounce-in:hover,
+.hvr-bounce-in:focus,
+.hvr-bounce-in:active {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
   -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
@@ -38,6 +41,7 @@
   -webkit-transition-property: transform;
   transition-property: transform;
 }
+
 .hvr-float-shadow:before {
   pointer-events: none;
   position: absolute;
@@ -56,12 +60,18 @@
   -webkit-transition-property: transform, opacity;
   transition-property: transform, opacity;
 }
-.hvr-float-shadow:hover, .hvr-float-shadow:focus, .hvr-float-shadow:active {
+
+.hvr-float-shadow:hover,
+.hvr-float-shadow:focus,
+.hvr-float-shadow:active {
   -webkit-transform: translateY(-5px);
   transform: translateY(-5px);
   /* move the element up by 5px */
 }
-.hvr-float-shadow:hover:before, .hvr-float-shadow:focus:before, .hvr-float-shadow:active:before {
+
+.hvr-float-shadow:hover:before,
+.hvr-float-shadow:focus:before,
+.hvr-float-shadow:active:before {
   opacity: 1;
   -webkit-transform: translateY(5px);
   transform: translateY(5px);
@@ -77,6 +87,7 @@
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   position: relative;
 }
+
 .hvr-curl-bottom-right:before {
   pointer-events: none;
   position: absolute;
@@ -94,7 +105,10 @@
   -webkit-transition-property: width, height;
   transition-property: width, height;
 }
-.hvr-curl-bottom-right:hover:before, .hvr-curl-bottom-right:focus:before, .hvr-curl-bottom-right:active:before {
+
+.hvr-curl-bottom-right:hover:before,
+.hvr-curl-bottom-right:focus:before,
+.hvr-curl-bottom-right:active:before {
   width: 25px;
   height: 25px;
 }
